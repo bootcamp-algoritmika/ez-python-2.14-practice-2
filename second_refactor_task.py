@@ -78,10 +78,10 @@ class Spotify:
 		albums_with_popularity = {}
 		
 		for track in tracks_by_popularity:
-			if track[1] in albums_with_popularity:
-				albums_with_popularity[track[1]] += track[3]
+			if track[2] in albums_with_popularity:
+				albums_with_popularity[track[2]] += track[3]
 			else:
-				albums_with_popularity[track[1]] = track[3]
+				albums_with_popularity[track[2]] = track[3]
 		
 		most_popular_album = max(albums_with_popularity, key=albums_with_popularity.get)
 		return most_popular_album
